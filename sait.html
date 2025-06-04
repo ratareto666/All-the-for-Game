@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Входящие сообщения</title>
+    <style>
+        body {
+            background: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .messages-panel {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 0 16px #0002;
+            padding: 30px 30px 20px 30px;
+        }
+        .messages-panel h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .message-item {
+            background: #f7f7ff;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px #0001;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .message-num {
+            font-weight: bold;
+            color: #f90;
+            min-width: 28px;
+        }
+        .message-text {
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="messages-panel">
+        <h2>Входящие сообщения</h2>
+        <div id="messages"></div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script>
+    let msgCount = 0;
+    const messagesDiv = document.getElementById('messages');
+    const socket = io('http://localhost:5050');
+    socket.on('new_message', function(data) {
+        msgCount++;
+        const div = document.createElement('div');
+        div.className = 'message-item';
+        div.innerHTML = `<span class="message-num">${msgCount}.</span>
+                         <span class="message-text">${data.message}</span>`;
+        messagesDiv.appendChild(div);
+    });
+    </script>
+</body>
+</html>
