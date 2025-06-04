@@ -565,7 +565,7 @@ window.onclick = function(event) {
 };
 document.getElementById('sendMsgBtn').onclick = function() {
     const msg = document.querySelector('#modal textarea').value;
-    fetch('https://server-spou.onrender.com/', {
+    fetch('https://server-spou.onrender.com/send', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({message: msg})
