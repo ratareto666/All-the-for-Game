@@ -569,7 +569,7 @@ window.onclick = function(event) {
 };
 document.getElementById('sendMsgBtn').onclick = function() {
     const msg = document.querySelector('#modal textarea').value;
-    fetch('http://localhost:5050/send', {
+    fetch('https://server-spou.onrender.com/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({message: msg})
