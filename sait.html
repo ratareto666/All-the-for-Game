@@ -50,7 +50,7 @@
     <script>
     let msgCount = 0;
     const messagesDiv = document.getElementById('messages');
-    const socket = io('https://server-spou.onrender.com/send');
+    const socket = io('https://server-spou.onrender.com');
     socket.on('new_message', function(data) {
         msgCount++;
         const div = document.createElement('div');
