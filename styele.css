@@ -62,12 +62,12 @@ h6 { margin: 10px;
     gap: 20px;
     margin-top: 30px; 
 }
-/* ховаємо radio-кнопки */
+
 input[type="radio"] {
     display: none;
 }
 
-/* стилі для кнопок-імен */
+
 .character-menu {
     display: flex;
     flex-direction: column;
@@ -88,12 +88,12 @@ input[type="radio"] {
     color: white;
 }
 
-/* контент прихований за замовчуванням */
+
 .char-info {
     display: none;
 }
 
-/* показати правильний блок */
+
 #char1:checked ~ .layout .character-content #info1,
 #char2:checked ~ .layout .character-content #info2,
 #char3:checked ~ .layout .character-content #info3,
@@ -110,7 +110,7 @@ input[type="radio"] {
     display: block;
 }
 
-/* оформлення великого блоку */
+
 .character-content img {
     width: 300px;
     border-radius: 10px;
@@ -124,16 +124,16 @@ input[type="radio"] {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    /* убираем auto, задаём только отступы */
+
     margin-top: 40px;
     margin-bottom: 0;
-    margin-left: 2cm;   /* левый малый блок отступает от края */
-    margin-right: 2cm;  /* правый малый блок отступает от края */
-    gap: 5cm;           /* расстояние между малыми и большим блоком */
+    margin-left: 2cm;   
+    margin-right: 2cm;  
+    gap: 5cm;           
     min-height: 12cm;
 }
 
-/* Маленький блок слева, фиксируем его на всю высоту */
+
 .character-menu {
     display: flex;
     flex-direction: column;
@@ -142,7 +142,6 @@ input[type="radio"] {
     max-width: 5cm;
     height: 15cm;
     background: #fff;
-    /* border-radius: 20px;  <-- УДАЛИТЬ эту строку */
     box-shadow: 0 0 10px #0001;
     justify-content: flex-start;
     align-items: center;
@@ -157,7 +156,7 @@ input[type="radio"] {
     border-radius: 20px;
 }
 
-/* Кнопки-имена по центру */
+
 .character-menu label {
     background-color: #ffffff;
     padding: 10px 20px;
@@ -175,7 +174,7 @@ input[type="radio"] {
     color: white;
 }
 
-/* Большой блок справа */
+
 .character-content {
     flex: 1;
     min-width: 0;
@@ -189,7 +188,7 @@ input[type="radio"] {
     justify-content: flex-start;
 }
 
-/* Фото слева, текст обтекает */
+
 .character-content img {
     width: 300px;
     border-radius: 10px;
@@ -205,7 +204,7 @@ input[type="radio"] {
     text-align: left;
 }
 
-/* Скрытие/отображение информации */
+
 .char-info {
     display: none;
     width: 100%;
@@ -293,7 +292,7 @@ input[type="radio"] {
 .topic-text {
     font-size: 1.2em;
     color: #000000;
-    max-width: 20cm; /* было 700px, теперь шире примерно на 2см */
+    max-width: 20cm; 
     margin: 0 auto 30px auto;
     text-align: left;
     padding: 15px 65px 15px 45px; /* справа +20px (~2см) */
@@ -311,14 +310,14 @@ input[type="radio"] {
        background-position: left center; 
        color: #000000;
     }
-/* Показываем нужную тему */
+
 #topic1:checked ~ .topics-block .topic-content #section1,
 #topic2:checked ~ .topics-block .topic-content #section2,
 #topic3:checked ~ .topics-block .topic-content #section3 {
     display: block;
 }
 
-/* Модальное окно */
+
 .modal {
     display: none;
     position: fixed;
